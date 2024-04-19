@@ -1,0 +1,179 @@
+body {
+    font-family: arial, sans-serif;
+    color: #000;
+    font-size: 12px;
+    background: #F6F7FC;
+}
+
+#sideInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#sideInfo .logo {
+    display: block;
+    width: 222px;
+    height: 60px;
+    background: url('/verso/icons/logo.png') no-repeat;
+    background-size: 100%;
+    pointer-events: all;
+}
+
+#sideInfo #title {
+    font-size: 180%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: block;
+    pointer-events: all;
+}
+
+#sideInfo #addRoof {
+    font-size: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    pointer-events: all;
+}
+
+#controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 250px;
+    text-align: center;
+}
+
+#controls .hiiri {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 50px;
+    height: 65px;
+    display: inline-block;
+    margin: 0 5px 3px 5px;
+}
+#hiiri1 {
+    background-image: url('/verso/icons/hiiri1_2.png');
+}
+
+#hiiri2 {
+    background-image: url('/verso/icons/hiiri2_2.png');
+}
+
+#hiiri3 {
+    background-image: url('/verso/icons/hiiri3_2.png');
+}
+
+#cr {
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    bottom: 10px;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#overlay{
+    //background-image:url('/museo/musea/imgs/overlay.png');
+    background-color: rgba(0,0,0,0.5);
+    //background-repeat: repeat;
+    min-height: 100%;
+    min-width: 100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: -2;
+}
+
+.xyz123{
+    margin: 0px;
+    padding: 0px;
+    z-index:2;
+    height:100vh !important;
+    //background-image:url('/museo/musea/imgs/grid.png');
+    //background-repeat: no-repeat;
+    //background-position: bottom;
+    //background-size: 75% auto;
+}
+
+.xyz123_1200{
+    margin-bottom:0px;
+    margin-top:0px;
+    z-index:2;
+    height:100vh !important;
+    //background-image:url('/museo/musea/imgs/grid.png');
+    //background-repeat: no-repeat;
+    //background-position: bottom;
+    //background-size: 75% auto;
+}
+
+
+#visualisation{
+    margin: 0px;
+    padding: 0px;
+    //position:fixed;
+    z-index: 1;
+}
+
+#video{
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+#title, #addRoof{
+    z-index:2;
+}
+
+.hundredPros{
+    width:100%;
+}
+
+.progress-bar{
+    color:#000 !important;
+}
+
+@-moz-keyframes dropHeader {
+    0% {
+        -moz-transform: translateX(800px);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        -webkit-transform: translateX(800px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+@keyframes dropHeader {
+    0% {
+        transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
