@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="/verso/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/verso/style.css">
+    </head>
+    <body>
+        <div id="sideInfo">
+            <a class="logo" href="http://www.mfa.fi/"></a>
+            <span id="title">HYVINKÄÄN KIRKKO</span>
+            <a href="#" id="addRoof">LISÄÄ/POISTA KATTO</a>
+        </div>
+        <div class="col-md-12" id="visualisation" style="">
+            <div id="xyz123" class="col-md-12 col-sm-12 col-xs-12 xyz123">
+                <!--<img src="/museo/fullScreen_white.png" style="position:absolute;left:90%;bottom:5%;z-index:9999;width:10%;" id="fullMusea"></img>
+                <img src="/museo/fullScreen_white.png" style="position:absolute;left:90%;bottom:5%;z-index:9999;width:10%; display:none;" id="exitMusea"></img>-->
+                <div class="progress" id="progress" style="position:absolute;left:40%;top:50%;z-index:9999;width:20%;">
+                    <div class="progress-bar" id="progress-bar" style="width:0%;background: rgba(0, 0, 0, 0.29);transition: width .01s ease;">0%</div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <span id="hiiri1" class="hiiri" title="Käännä kameraa"></span>
+            <span id="hiiri2" class="hiiri" title="Siirrä kameraa"></span>
+            <span id="hiiri3" class="hiiri" title="Lähennä ja loitonna"></span>
+            <span id="cr">&copy; 2015 Museum of Finnish Architecture</span>
+        </div>
+        <script src="/verso/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="/verso/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/verso/three.js" type="text/javascript"></script>
+        <script src="/verso/app_min.js" type="text/javascript"></script>
+        <script>
+            window.onload = function () {
+                controls.maxPolarAngle = Math.PI / 2; // radians
+                loadNewModel_MTL("/verso/models/rchurch", 1);
+                loadAdditionalModel_MTL("/verso/models/wall_church", 1);
+                var roofEnabled = false;
+                $('#addRoof').on("click", function () {
+                    if (roofEnabled) {
+                        additionalModel.visible = false;
+                        roofEnabled = false;
+                    } else {
+                        additionalModel.visible = true;
+                        roofEnabled = true;
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
